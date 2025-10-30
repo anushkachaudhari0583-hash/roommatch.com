@@ -1,0 +1,33 @@
+# Environment Configuration for Roommatch Backend
+# Copy this file to .env and update the values
+
+# Flask Configuration
+SECRET_KEY=your-super-secret-key-change-in-production
+FLASK_ENV=development
+FLASK_DEBUG=True
+
+# Database Configuration
+DATABASE_URL=sqlite:///roommatch.db
+# For PostgreSQL: postgresql://username:password@localhost/roommatch_db
+
+# JWT Configuration
+JWT_SECRET_KEY=your-jwt-secret-key-change-in-production
+JWT_ACCESS_TOKEN_EXPIRES=86400
+
+# CORS Configuration
+CORS_ORIGINS=http://localhost:3000,http://127.0.0.1:5500,http://localhost:5500
+
+# Email Configuration (for future use)
+MAIL_SERVER=smtp.gmail.com
+MAIL_PORT=587
+MAIL_USE_TLS=True
+MAIL_USERNAME=your-email@gmail.com
+MAIL_PASSWORD=your-app-password
+
+# File Upload Configuration
+MAX_CONTENT_LENGTH=16777216  # 16MB
+UPLOAD_FOLDER=uploads
+
+# Matching Algorithm Configuration
+MIN_COMPATIBILITY_SCORE=0.6
+MAX_MATCHES_PER_USER=50
